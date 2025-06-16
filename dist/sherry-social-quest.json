@@ -1,0 +1,58 @@
+{
+  "url": "http://localhost:3002",
+  "icon": "🌟",
+  "title": "Social DeFi Quest",
+  "description": "Complete social quests and build your DeFi community!",
+  "actions": [
+    {
+      "type": "blockchain",
+      "label": "Complete Social Quest",
+      "address": "0x86d67c3D38D2bCeE722E601025C25a575021c6EA",
+      "abi": [
+        {
+          "name": "completeQuest",
+          "type": "function",
+          "stateMutability": "nonpayable",
+          "inputs": [
+            { "name": "questId", "type": "uint256" },
+            { "name": "heroTokenId", "type": "uint256" },
+            { "name": "socialProof", "type": "string" }
+          ],
+          "outputs": [{ "name": "success", "type": "bool" }]
+        }
+      ],
+      "functionName": "completeQuest",
+      "chains": { "source": "fuji" },
+      "amount": 0,
+      "params": [
+        {
+          "name": "questId",
+          "label": "Social Quest Type",
+          "type": "select",
+          "required": true,
+          "options": [
+            { "label": "📱 Share DeFi Strategy", "value": 1, "description": "Share your best DeFi strategy (+200 EXP)" },
+            { "label": "👥 Invite 3 Friends", "value": 2, "description": "Invite friends to join DeFi (+300 EXP)" },
+            { "label": "💬 Community Discussion", "value": 3, "description": "Start a DeFi discussion (+150 EXP)" },
+            { "label": "🎯 Weekly Challenge", "value": 4, "description": "Complete weekly DeFi challenge (+500 EXP)" }
+          ]
+        },
+        {
+          "name": "heroTokenId",
+          "label": "Hero Token ID",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "description": "Your hero NFT token ID to complete the quest"
+        },
+        {
+          "name": "socialProof",
+          "label": "Social Proof URL",
+          "type": "url",
+          "required": true,
+          "description": "Link to your social media post or proof of completion"
+        }
+      ]
+    }
+  ]
+} 

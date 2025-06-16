@@ -1,0 +1,59 @@
+{
+  "url": "http://localhost:3002",
+  "icon": "⚔️",
+  "title": "DeFi Hero Quest - Social RPG",
+  "description": "🏆 Sherry Minithon Winner - Mint heroes, complete DeFi quests, earn rewards!",
+  "actions": [
+    {
+      "type": "blockchain",
+      "label": "Mint DeFi Hero NFT",
+      "address": "0x5425890298aed601595a70AB815c96711a31Bc65",
+      "abi": [
+        {
+          "name": "mintHero",
+          "type": "function",
+          "stateMutability": "payable",
+          "inputs": [
+            { "name": "to", "type": "address" },
+            { "name": "heroClass", "type": "uint8" },
+            { "name": "username", "type": "string" }
+          ],
+          "outputs": [{ "name": "tokenId", "type": "uint256" }]
+        }
+      ],
+      "functionName": "mintHero",
+      "chains": { "source": "fuji" },
+      "amount": 0.01,
+      "params": [
+        {
+          "name": "to",
+          "label": "Your Wallet Address",
+          "type": "address",
+          "required": true,
+          "description": "Address that will receive the hero NFT"
+        },
+        {
+          "name": "heroClass",
+          "label": "Hero Class",
+          "type": "select",
+          "required": true,
+          "options": [
+            { "label": "⚔️ DeFi Knight (Balanced)", "value": 0, "description": "ATK: 45 | DEF: 55 | MAG: 40" },
+            { "label": "🧙‍♂️ Yield Wizard (Magic)", "value": 1, "description": "ATK: 35 | DEF: 30 | MAG: 65" },
+            { "label": "🏹 Staking Ranger (Attack)", "value": 2, "description": "ATK: 50 | DEF: 40 | MAG: 40" },
+            { "label": "🛡️ LP Guardian (Defense)", "value": 3, "description": "ATK: 30 | DEF: 65 | MAG: 35" }
+          ]
+        },
+        {
+          "name": "username",
+          "label": "Hero Name",
+          "type": "text",
+          "required": true,
+          "minLength": 3,
+          "maxLength": 20,
+          "description": "Choose a unique name for your hero"
+        }
+      ]
+    }
+  ]
+} 

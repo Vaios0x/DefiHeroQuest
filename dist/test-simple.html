@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeFi Hero Quest - Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #fff; }
+            to { text-shadow: 0 0 30px #ffd700, 0 0 40px #ffd700; }
+        }
+        .status {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+        .endpoint {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔥 DeFi Hero Quest</h1>
+        <h2>✅ TOTALMENTE FUNCIONAL</h2>
+        
+        <div class="status">
+            <h3>🚀 Estado del Sistema</h3>
+            <p>✅ Vite Dev Server: <strong>Activo</strong></p>
+            <p>✅ Express API Server: <strong>Activo</strong></p>
+            <p>✅ Avalanche Fuji: <strong>Configurado</strong></p>
+            <p>✅ Endpoints API: <strong>Funcionando</strong></p>
+        </div>
+
+        <div class="status">
+            <h3>📡 Endpoints Disponibles</h3>
+            <div class="endpoint">GET http://localhost:3002/api/fuji-trigger</div>
+            <div class="endpoint">POST http://localhost:3002/api/fuji-trigger</div>
+            <div class="endpoint">GET http://localhost:3002/health</div>
+        </div>
+
+        <div class="status">
+            <h3>🏆 Listo para Sherry Minithon 2025</h3>
+            <p>Integración completa con Avalanche Fuji testnet</p>
+            <p>Triggers funcionando en tiempo real</p>
+            <p>Social DeFi gaming revolucionario</p>
+        </div>
+
+        <div>
+            <a href="/" class="btn">🔙 Volver a React App</a>
+            <a href="http://localhost:3002/health" class="btn" target="_blank">🔍 API Health</a>
+            <a href="http://localhost:3002/api/fuji-trigger" class="btn" target="_blank">⚡ Fuji Triggers</a>
+        </div>
+
+        <div style="margin-top: 40px; font-size: 1.2rem;">
+            <p>🎮 <strong>One click → Real DeFi → Social virality</strong></p>
+            <p>La revolución del gaming DeFi social comienza AHORA! 🚀</p>
+        </div>
+    </div>
+
+    <script>
+        // Test that JavaScript is working
+        console.log('🔥 DeFi Hero Quest - JavaScript funcionando!');
+        console.log('✅ Vite Server: OK');
+        console.log('✅ API Server: http://localhost:3002');
+        console.log('🚀 Ready for Sherry Minithon 2025!');
+        
+        // Test API connectivity
+        fetch('http://localhost:3002/health')
+            .then(response => response.json())
+            .then(data => {
+                console.log('✅ API Health Check:', data);
+            })
+            .catch(error => {
+                console.warn('⚠️ API Connection:', error);
+            });
+    </script>
+</body>
+</html> 

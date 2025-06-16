@@ -1,0 +1,66 @@
+{
+  "url": "http://localhost:3002",
+  "icon": "💰",
+  "title": "DeFi Staking Quest",
+  "description": "Complete DeFi staking quests and earn rewards with your hero!",
+  "actions": [
+    {
+      "type": "blockchain",
+      "label": "Complete DeFi Staking Quest",
+      "address": "0x86d67c3D38D2bCeE722E601025C25a575021c6EA",
+      "abi": [
+        {
+          "name": "stakeDeFiQuest",
+          "type": "function",
+          "stateMutability": "payable",
+          "inputs": [
+            { "name": "amount", "type": "uint256" },
+            { "name": "duration", "type": "uint256" },
+            { "name": "guildId", "type": "uint256" }
+          ],
+          "outputs": [{ "name": "questId", "type": "uint256" }]
+        }
+      ],
+      "functionName": "stakeDeFiQuest",
+      "chains": { "source": "fuji" },
+      "amount": 0,
+      "params": [
+        {
+          "name": "amount",
+          "label": "Staking Amount (AVAX)",
+          "type": "select",
+          "required": true,
+          "options": [
+            { "label": "0.1 AVAX (Beginner Quest)", "value": "100000000000000000", "description": "+100 EXP, +50 coins" },
+            { "label": "0.5 AVAX (Advanced Quest)", "value": "500000000000000000", "description": "+300 EXP, +200 coins" },
+            { "label": "1.0 AVAX (Expert Quest)", "value": "1000000000000000000", "description": "+600 EXP, +500 coins" },
+            { "label": "2.0 AVAX (Legendary Quest)", "value": "2000000000000000000", "description": "+1200 EXP, +1000 coins" }
+          ]
+        },
+        {
+          "name": "duration",
+          "label": "Staking Duration",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "label": "7 days (5% bonus)", "value": 604800, "description": "Short commitment" },
+            { "label": "30 days (15% bonus)", "value": 2592000, "description": "Medium commitment" },
+            { "label": "90 days (30% bonus)", "value": 7776000, "description": "Long commitment" }
+          ]
+        },
+        {
+          "name": "guildId",
+          "label": "Join Guild (Optional)",
+          "type": "select",
+          "required": false,
+          "options": [
+            { "label": "Solo Quest (No guild)", "value": 0, "description": "Complete quest individually" },
+            { "label": "DeFi Pioneers Guild", "value": 1, "description": "+20% social bonus" },
+            { "label": "Yield Farmers Guild", "value": 2, "description": "+25% yield bonus" },
+            { "label": "Staking Masters Guild", "value": 3, "description": "+30% staking bonus" }
+          ]
+        }
+      ]
+    }
+  ]
+} 
